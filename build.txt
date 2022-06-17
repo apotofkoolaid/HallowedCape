@@ -1,0 +1,4 @@
+displayName = Hallowed Cape
+author = apotofkoolaid
+version = 1.2.1
+hideCode = true
