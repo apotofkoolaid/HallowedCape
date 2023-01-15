@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tn488YcqxZZNsZmAWrxAPeiPCLatUYKlcQ6JIPVX9mZ0j2JfbtNB+xo/sES++VWbJbyjCeIur06H6zODRoW+XA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\apotofkoolaid\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\HallowedCape\\HallowedCape.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\apotofkoolaid\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
