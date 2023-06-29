@@ -1,7 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.GameContent.Creative;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace HallowedCape.Items
@@ -9,11 +8,10 @@ namespace HallowedCape.Items
 	[AutoloadEquip(EquipType.Back)]
     public class HallowedCape : ModItem
     {
-		public override void SetStaticDefaults()
-        {
-			Tooltip.SetDefault("'The cloak of a hero'");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-        }
+        public override LocalizedText DisplayName => Language.GetOrRegister("Hallowed Cape");
+
+        public override LocalizedText Tooltip => Language.GetOrRegister("'The cloak of a hero'");
+
         public override void SetDefaults()
         {
             Item.value = 0;
@@ -21,13 +19,14 @@ namespace HallowedCape.Items
 			Item.accessory = true;
 			Item.vanity = true;
         }
+
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.HallowedBar, 2);
-            recipe.AddIngredient(ItemID.Silk, 5);
-            recipe.AddTile(TileID.Loom);
-            recipe.Register();
+            Recipe.Create(Type, 1)
+				.AddIngredient(ItemID.HallowedBar, 2)
+				.AddIngredient(ItemID.Silk, 5)
+				.AddTile(TileID.Loom)
+				.Register();
         }
     }
 }
